@@ -1,0 +1,54 @@
+@include sm {
+    .width_float {
+        width: 100%;
+        float: none;
+    }
+
+    header{
+        position: static;
+        .logo{
+            text-align: center;
+        }
+
+        ul{
+            display: block;
+        }
+    }
+
+    .h2{
+        font-size: 3.5rem;
+    }
+
+    .service{
+        .service-parent{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .images{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@include xs{
+    .service{
+        .service-parent{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .images{
+        grid-template-columns: 1fr;
+        div{
+            img{
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+@include md{
+    .images{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

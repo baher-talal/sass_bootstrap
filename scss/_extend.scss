@@ -1,0 +1,55 @@
+.width_float {
+    width: 50%;
+    float: left;
+}
+
+.h2{
+    color: #FFF;
+    font-size: 5rem;
+}
+
+.span{
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: $primaryColor;
+    margin: auto;
+}
+
+.p{
+    margin: 10px 0;
+    color: $thirdColor;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.button-prim{
+    background-color: $primaryColor;
+    color: #FFF;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border: 0;
+    padding: 10px 20px;
+    font-weight: bold;
+    @include Trans;
+    &:hover{
+        background-color: #FFF;
+        color: $primaryColor;
+    }
+}
+
+.button-sec{
+    background: #FFF;
+    color: $secColor;
+    text-transform: uppercase;
+    border-radius: 25px;
+    border: 0;
+    padding: 15px 30px;
+    font-weight: bold;
+    @include Trans;
+    &:hover{
+        background-color: $secColor;
+        color: #FFF;
+        border: 1px solid #FFF;
+    }
+}

@@ -1,0 +1,259 @@
+.width_float, header ul, header .logo {
+  width: 50%;
+  float: left;
+}
+
+.h2, .touch h2, .download h2, .service h2, .need h2, .home .home-content h2 {
+  color: #FFF;
+  font-size: 5rem;
+}
+
+.span, .touch > span, .service span, .need span, .home .home-content span {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #F05F40;
+  margin: auto;
+}
+
+.p, .touch p, .need p, .home .home-content p {
+  margin: 10px 0;
+  color: #C9C5BD;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+.button-prim, .home .home-content button {
+  background-color: #F05F40;
+  color: #FFF;
+  text-transform: uppercase;
+  border-radius: 15px;
+  border: 0;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+}
+.button-prim:hover, .home .home-content button:hover {
+  background-color: #FFF;
+  color: #F05F40;
+}
+
+.button-sec, .download button, .need button {
+  background: #FFF;
+  color: #191B1D;
+  text-transform: uppercase;
+  border-radius: 25px;
+  border: 0;
+  padding: 15px 30px;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+}
+.button-sec:hover, .download button:hover, .need button:hover {
+  background-color: #191B1D;
+  color: #FFF;
+  border: 1px solid #FFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* Header Section */
+header {
+  background-color: #191B1D;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+header .logo h2 {
+  color: #F05F40;
+  margin-top: 13px;
+}
+header ul {
+  display: flex;
+  padding: 10px 0;
+}
+header ul li {
+  padding: 10px 15px;
+}
+header ul li a {
+  color: #C9C5BD;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+}
+header ul li a:hover {
+  color: #F05F40;
+  text-decoration: none;
+}
+
+/* Home Section */
+.home {
+  background-image: url("../img/header.jpg");
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+.home .home-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Need Section */
+.need {
+  background-color: #F05F40;
+  padding: 5rem 0;
+}
+.need span {
+  background-color: #FFF;
+}
+/* Service Section */
+.service {
+  padding: 5rem 0;
+}
+.service h2 {
+  color: #191B1D;
+}
+.service span {
+  margin-bottom: 1px;
+}
+.service .service-parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  margin: 1.5rem 0;
+}
+.service .service-parent h3 {
+  margin: 1rem 0;
+  color: #333;
+}
+.service .service-parent p {
+  color: #A4A4A4;
+}
+
+.service-parent .fa-1 {
+  color: #F05F40;
+}
+
+.service-parent .fa-2 {
+  color: #F05F40;
+}
+
+/* Images Section */
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.images > div {
+  position: relative;
+}
+.images > div img {
+  width: 100%;
+}
+.images > div:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 95, 64, 0.5);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.images > div:hover:after {
+  opacity: 0.8;
+}
+
+/* Download Section */
+.download {
+  background-color: #191B1D;
+  padding: 5rem 0;
+}
+.download button {
+  margin: 1rem 0;
+}
+
+/* Touch Section */
+.touch {
+  padding: 5rem 0;
+}
+.touch h2 {
+  color: #191B1D;
+}
+.touch p {
+  font-size: 17px;
+  color: #666464;
+}
+.touch .touch-two {
+  display: flex;
+  justify-content: center;
+}
+.touch .touch-two .item {
+  margin: 1rem 1.5rem;
+}
+.touch .touch-two .item a {
+  color: #F05F40;
+  font-size: 18px;
+  text-decoration: none;
+}
+.touch .touch-two .item a i {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .width_float, header .logo, header ul {
+    width: 100%;
+    float: none;
+  }
+
+  header {
+    position: static;
+  }
+  header .logo {
+    text-align: center;
+  }
+  header ul {
+    display: block;
+  }
+
+  .h2, .home .home-content h2, .need h2, .service h2, .download h2, .touch h2 {
+    font-size: 3.5rem;
+  }
+
+  .service .service-parent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 575px) {
+  .service .service-parent {
+    grid-template-columns: 1fr;
+  }
+
+  .images {
+    grid-template-columns: 1fr;
+  }
+  .images div img {
+    margin-bottom: 5px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1170px) {
+  .images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
